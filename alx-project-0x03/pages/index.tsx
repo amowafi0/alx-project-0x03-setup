@@ -6,7 +6,7 @@ interface PageRouteProps {
 }
 
 export default function Home() {
-    const router = useRouter()
+    const router = useRouter();
 
     // Imeperative routing with useRouter
     const routeToNextPage  = ({ pageRoute }: PageRouteProps) => {
@@ -24,6 +24,7 @@ export default function Home() {
                 navigating to our features below.
             </p>
 
+            {/* Navigation Options */}
             <div className="flex gap-6">
                 <Button action={() => routeToNextPage({ pageRoute: '/generate-text-ai' })} buttonLabel="Generate Text" buttonBackgroundColor="blue" />
                 <Button action={() => routeToNextPage({ pageRoute: '/text-to-image'})} buttonLabel="Text to Image" buttonBackgroundColor="green" />
